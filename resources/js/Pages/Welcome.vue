@@ -28,7 +28,7 @@ defineProps({
                 </div>
             </div>
 
-            <div class="mt-4 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+            <div class="mt-4 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-md">
                 <div class="grid grid-cols-1">
                     <div class="p-6">
                         <div class="flex items-center">

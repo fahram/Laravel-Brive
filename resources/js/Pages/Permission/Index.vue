@@ -84,7 +84,7 @@ const select = () => {
         <Breadcrumb :title="title" :breadcrumbs="breadcrumbs" />
         <div class="space-y-4">
             <div class="px-4 sm:px-0">
-                <div class="rounded-lg overflow-hidden w-fit">
+                <div class="rounded-md overflow-hidden w-fit">
                     <PrimaryButton v-show="can(['create permission'])" class="rounded-none"
                         @click="data.createOpen = true">
                         {{ lang().button.add }}
@@ -99,7 +99,7 @@ const select = () => {
                         :selectedId="data.selectedId" :title="props.title" />
                 </div>
             </div>
-            <div class="relative bg-white dark:bg-gray-800 shadow sm:rounded-lg">
+            <div class="relative bg-white dark:bg-gray-800 shadow sm:rounded-md">
                 <div class="flex justify-between p-2">
                     <div class="flex space-x-2">
                         <SelectInput v-model="data.params.perPage" :dataSet="data.dataSet" />
@@ -109,7 +109,7 @@ const select = () => {
                             <TrashIcon class="w-5 h-5" />
                         </DangerButton>
                     </div>
-                    <TextInput v-model="data.params.search" type="text" class="block w-3/6 md:w-2/6 lg:w-1/6 rounded-lg"
+                    <TextInput v-model="data.params.search" type="text" class="block w-3/6 md:w-2/6 lg:w-1/6 rounded-md"
                         :placeholder="lang().placeholder.search" />
                 </div>
                 <div class="overflow-x-auto scrollbar-table">
@@ -163,7 +163,7 @@ const select = () => {
                                 <td class="whitespace-nowrap py-4 px-2 sm:py-3">{{ permission.updated_at }}</td>
                                 <td class="whitespace-nowrap py-4 px-2 sm:py-3">
                                     <div class="flex justify-center items-center">
-                                        <div class="rounded-md overflow-hidden">
+                                        <div class="rounded-sm overflow-hidden">
                                             <InfoButton v-show="can(['update permission'])" type="button"
                                                 @click="(data.editOpen = true), (data.permission = permission)"
                                                 class="px-2 py-1.5 rounded-none" v-tooltip="lang().tooltip.edit">
